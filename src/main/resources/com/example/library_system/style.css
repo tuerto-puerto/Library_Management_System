@@ -1,0 +1,123 @@
+.error-textfield {
+    -fx-border-color: red;
+    -fx-border-width: 1.5px;
+}
+
+.error-datepicker {
+    -fx-border-color: red;
+    -fx-border-width: 1.5px;
+}
+
+error-passwordfield {
+    -fx-border-color: red;
+    -fx-border-width: 1.5px;
+}
+
+.custom-table-view .table-row-cell:hover {
+    -fx-background-color: #fbca92;
+}
+
+.custom-table-view .table-row-cell:selected {
+    -fx-background-color: #f68809;
+}
+
+#logout {
+    -fx-background-color: #ff1100;
+    -fx-text-fill: #fff;
+    -fx-font-size: 12px;
+    -fx-border-radius: 5px;
+}
+
+#logout:hover {
+    -fx-background-color: #ff5c50;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #f68809;
+    -fx-background-insets: 0, 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 0);
+}
+
+.table-view .scroll-bar:vertical .increment-button,
+.table-view .scroll-bar:vertical .decrement-button,
+.table-view .scroll-bar:horizontal .increment-button,
+.table-view .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.slider {
+    -fx-background-color: transparent;
+}
+
+/* Style the track of the Slider */
+.slider .track {
+    -fx-background-color: white; /* Set the color for the track */
+    -fx-border-color: #f68809;
+
+}
+
+/* Style the thumb of the Slider */
+.slider .thumb {
+    -fx-background-color: #f68809; /* Set the color for the thumb */
+    -fx-background-radius: 25; /* Set the thumb border radius to 0 for a squared appearance */
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #d97808; /* Set the color for the thumb */
+    -fx-background-radius: 25; /* Set the thumb border radius to 0 for a squared appearance */
+}
+
+
+.button {
+    -fx-background-color: #f68809; /* Set the background color */
+    -fx-text-fill: white; /* Set the text color */
+    -fx-background-radius: 5; /* Set the button border radius for a rounded appearance */
+}
+
+/* Hover effect for the Button */
+.button:hover {
+    -fx-background-color: #e57200; /* Set a different color when hovered */
+}
+
+/* Pressed effect for the Button */
+.button:pressed {
+    -fx-background-color: #d15e00; /* Set a different color when pressed */
+}
+
+/* Apply the custom style to the ImageView */
+.custom-image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0); /* Optional: Add a drop shadow */
+    -fx-transition-duration: 0.3s; /* Set the transition duration */
+}
+
+/* Zoom effect on hover */
+.custom-image-view:hover {
+    -fx-scale-x: 1.1; /* Increase the scale on the X-axis */
+    -fx-scale-y: 1.1; /* Increase the scale on the Y-axis */
+}
+
+    -fx-shape: "M 0 0 h 10 l -5 7 l -5 -7 Z"; /* Triangle shape */
+    -fx-background-insets: 0; /* Remove button padding */
+}
+/* Assuming your ListView has the ID "myListView" */
+#myListView {
+    -fx-border-color: #f68809;
+}
+
+/* Style for the items inside the ListView */
+#myListView .list-cell {
+    -fx-text-fill: black; /* Set text color to white */
+}
+
+/* Style for the item in the ListView on hover */
+#myListView .list-cell:hover {
+    -fx-background-color: #ffb741; /* Set a lighter version of #f68809 on hover */
+}
+
+/* Style for the selected item in the ListView */
+#myListView .list-cell:selected {
+    -fx-text-fill: white;
+    -fx-background-color: #f68809; /* Set background color to #f68809 when selected */
+}
