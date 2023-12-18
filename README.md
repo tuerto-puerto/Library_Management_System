@@ -24,3 +24,9 @@ Team members: Bekzhan Azamatov, Ibrohim Pazylov, Turatbek Torobekov.
 
 9. **UserDB.java**: Manages database operations related to users, including user creation, authentication, and retrieving user information.
 ![image](https://github.com/tuerto-puerto/Library_Management_System/assets/120041495/bb3133a7-0692-45ed-8b4d-0676c38fd833)
+
+
+![image](https://github.com/tuerto-puerto/Library_Management_System/assets/120041495/ae69f107-697b-4cff-85cf-2cd156d8c3e4)
+
+
+![image](https://github.com/tuerto-puerto/Library_Management_System/assets/120041495/4975af4c-f847-42de-856b-ccd8d8259bc3)
