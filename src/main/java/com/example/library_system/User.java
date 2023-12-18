@@ -22,9 +22,6 @@ public class User {
     private String user_address;
     private String user_password;
 
-    private String user_passportNumber;
-    private String user_licenseNumber;
-
     public String getUser_licenseCategoria() {
         return user_licenseCategoria;
     }
@@ -90,23 +87,4 @@ public class User {
     public void setUser_password(String user_password) {
         this.user_password = user_password;
     }
-
-    public String getUser_passportNumber() {
-        return user_passportNumber;
-    }
-
-    public void setUser_passportNumber(String user_passportNumber) {
-        this.user_passportNumber = user_passportNumber;
-    }
-
-    public String getUser_licenseNumber() {
-        return user_licenseNumber;
-    }
-
-    public void setUser_licenseNumber(String user_licenseNumber) {
-        this.user_licenseNumber = user_licenseNumber;
-    }
-
-
-
 }

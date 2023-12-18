@@ -1,14 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.library_system.MainPageController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_system.MainPageController">
+   <children>
+      <TableView fx:id="booksTable" layoutX="-1.0" layoutY="84.0" onKeyPressed="#onBookSelected" onMouseClicked="#onBookSelected" prefHeight="514.0" prefWidth="352.0">
+        <columns>
+          <TableColumn fx:id="authorColumn" prefWidth="127.99999696016312" text="Author" />
+          <TableColumn fx:id="titleColumn" prefWidth="127.99998474121094" text="Book" />
+            <TableColumn fx:id="yearColumn" prefWidth="95.20001220703125" text="Year" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1de21d" height="74.0" stroke="TRANSPARENT" strokeType="INSIDE" width="900.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="236.0" layoutX="382.0" layoutY="86.0" stroke="#1de01d" strokeType="INSIDE" strokeWidth="3.0" width="243.0" />
+      <ImageView fitHeight="358.0" fitWidth="358.0" layoutX="325.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/book.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="SearchField" layoutX="286.0" layoutY="25.0" prefHeight="27.0" prefWidth="222.0" promptText="Write book name or Author" style="-fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5;" />
+      <Button fx:id="SearchButton" layoutX="515.0" layoutY="25.0" maxHeight="26.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="20.0" prefWidth="54.0" style="-fx-background-color: black;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.8" />
+         </font>
+      </Button>
+      <Label fx:id="BookName" alignment="BASELINE_CENTER" layoutX="449.0" layoutY="168.0" prefHeight="48.0" prefWidth="98.0" style="-fx-font-weight: bold;" text="Name" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="BookAuthor" alignment="BASELINE_CENTER" layoutX="444.0" layoutY="249.0" prefHeight="26.0" prefWidth="107.0" text="Author" textFill="WHITE">
+         <font>
+            <Font size="11.5" />
+         </font>
+      </Label>
+      <Text layoutX="668.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="668.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+      <Text layoutX="668.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESPN" />
+      <Text layoutX="668.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" />
+      <Label fx:id="Name" layoutX="774.0" layoutY="92.0" prefHeight="18.0" prefWidth="98.0" style="-fx-font-weight: Bold;" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="Author" layoutX="774.0" layoutY="140.0" prefHeight="18.0" prefWidth="98.0" style="-fx-font-weight: Bold;" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="Espn" layoutX="774.0" layoutY="189.0" prefHeight="18.0" prefWidth="98.0" style="-fx-font-weight: Bold;" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="Year" layoutX="774.0" layoutY="243.0" prefHeight="18.0" prefWidth="98.0" style="-fx-font-weight: Bold;" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Text layoutX="385.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" wrappingWidth="84.251953125">
+         <font>
+            <Font size="12.5" />
+         </font>
+      </Text>
+      <Label fx:id="Description" alignment="TOP_LEFT" layoutX="469.0" layoutY="353.0" prefHeight="138.0" prefWidth="358.0" text="Label" wrapText="true" />
+      <Button fx:id="TakeButton" layoutX="692.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleTakeButtonAction" prefHeight="27.0" prefWidth="158.0" style="-fx-background-color: #1de21d;" text="Take" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="Price" layoutX="388.0" layoutY="522.0" prefHeight="18.0" prefWidth="116.0" text="Label" textFill="#05a118">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserName" alignment="TOP_RIGHT" layoutX="618.0" layoutY="29.0" prefHeight="18.0" prefWidth="186.0" text="Label">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogoutButton" layoutX="821.0" layoutY="25.0" mnemonicParsing="false" onAction="#onClickLogoutButton" prefHeight="6.0" prefWidth="57.0" style="-fx-background-color: red;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="74.0" fitWidth="77.0" layoutX="24.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="99.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekibratur">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="101.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="667.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+      <Label fx:id="Status" layoutX="774.0" layoutY="295.0" prefHeight="18.0" prefWidth="98.0" style="-fx-font-weight: Bold;" text="Free" textFill="#03b700">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

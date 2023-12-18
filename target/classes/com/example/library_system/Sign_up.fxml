@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -18,56 +16,47 @@
 <AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_system.Sign_up_Controller">
    
    <children>
-      <AnchorPane fx:id="signUp1" layoutX="4.0" layoutY="40.0" prefHeight="478.0" prefWidth="527.0" visible="false">
+      <AnchorPane layoutX="5.0" layoutY="92.0" prefHeight="478.0" prefWidth="527.0">
          <children>
-            <TextField fx:id="NameField" layoutX="88.0" layoutY="70.0" prefHeight="26.0" prefWidth="219.0" promptText="Name" style="-fx-border-color: #f68809;" stylesheets="@style.css" />
-            <TextField fx:id="EmailField" layoutX="88.0" layoutY="282.0" prefHeight="26.0" prefWidth="219.0" promptText="Email" style="-fx-border-color: #f68809;" stylesheets="@style.css" />
-            <TextField fx:id="PhoneField" layoutX="88.0" layoutY="240.0" prefHeight="26.0" prefWidth="219.0" promptText="Phone number" style="-fx-border-color: #f68809;" stylesheets="@style.css" />
-            <TextField fx:id="AddressField" layoutX="88.0" layoutY="198.0" prefHeight="26.0" prefWidth="219.0" promptText="Address" style="-fx-border-color: #f68809;" stylesheets="@style.css" />
-            <DatePicker fx:id="BirthdayPick" layoutX="192.0" layoutY="152.0" prefHeight="26.0" prefWidth="117.0" style="-fx-border-color: #f68809;" stylesheets="@style.css" />
+            <TextField fx:id="NameField" layoutX="88.0" layoutY="67.0" prefHeight="26.0" prefWidth="219.0" promptText="Name" style="-fx-border-color: #1de21d;" stylesheets="@style.css" />
+            <TextField fx:id="EmailField" layoutX="88.0" layoutY="282.0" prefHeight="26.0" prefWidth="219.0" promptText="Email" style="-fx-border-color: #1de21d;" stylesheets="@style.css" />
+            <TextField fx:id="PhoneField" layoutX="88.0" layoutY="240.0" prefHeight="26.0" prefWidth="219.0" promptText="Phone number" style="-fx-border-color: #1de21d;" stylesheets="@style.css" />
+            <TextField fx:id="AddressField" layoutX="88.0" layoutY="198.0" prefHeight="26.0" prefWidth="219.0" promptText="Address" style="-fx-border-color: #1de21d;" stylesheets="@style.css" />
+            <DatePicker fx:id="BirthdayPick" layoutX="192.0" layoutY="152.0" prefHeight="26.0" prefWidth="117.0" style="-fx-border-color: #1de21d;" stylesheets="@style.css" />
             <Text layoutX="91.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthday" />
-            <PasswordField fx:id="PasswordField" layoutX="88.0" layoutY="324.0" prefHeight="26.0" prefWidth="219.0" promptText="Password" style="-fx-border-color: #f68809;" stylesheets="@style.css" />
-            <PasswordField fx:id="ConfirmPassword" layoutX="88.0" layoutY="364.0" prefHeight="26.0" prefWidth="219.0" promptText="Confirm Password" style="-fx-border-color: #f68809;" stylesheets="@style.css" />
-            <Circle fx:id="Page1" fill="DODGERBLUE" layoutX="186.0" layoutY="36.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Page2" fill="WHITE" layoutX="210.0" layoutY="36.0" onMouseClicked="#onClickCirclePage2" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
-            <TextField fx:id="SurnameField" layoutX="88.0" layoutY="111.0" prefHeight="26.0" prefWidth="219.0" promptText="Surname" style="-fx-border-color: #f68809;" />
+            <PasswordField fx:id="PasswordField" layoutX="88.0" layoutY="324.0" prefHeight="26.0" prefWidth="219.0" promptText="Password" style="-fx-border-color: #1de21d;" stylesheets="@style.css" />
+            <PasswordField fx:id="ConfirmPassword" layoutX="88.0" layoutY="364.0" prefHeight="26.0" prefWidth="219.0" promptText="Confirm Password" style="-fx-border-color: #1de21d;" stylesheets="@style.css" />
+            <TextField fx:id="SurnameField" layoutX="88.0" layoutY="111.0" prefHeight="26.0" prefWidth="219.0" promptText="Surname" style="-fx-border-color: #1de21d;" />
+            <Button fx:id="SignUpButton" layoutX="88.0" layoutY="404.0" mnemonicParsing="false" onAction="#onClickSignUpButton" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: #1de21d;" text="Sign Up" textFill="#fcfcfc" />
+            <Hyperlink fx:id="SignIn" layoutX="260.0" layoutY="436.0" onAction="#onClickLinkSignIn" text="Sign In" textFill="#1de21d" />
+            <Text layoutX="115.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" />
+            <Label fx:id="CautionLabel" layoutX="164.0" layoutY="458.0" prefHeight="18.0" prefWidth="159.0" textFill="RED" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="signUp2" focusTraversable="true" layoutX="-1.0" layoutY="51.0" prefHeight="534.0" prefWidth="450.0" style="-fx-mark-highlight-color: #f68809;">
-         <children>
-            <TextField fx:id="Passport" layoutX="94.0" layoutY="309.0" prefHeight="26.0" prefWidth="219.0" promptText="Passport" style="-fx-border-color: #f68809;" />
-            <TextField fx:id="DriverLicence" layoutX="94.0" layoutY="356.0" prefHeight="26.0" prefWidth="219.0" promptText="Driver Licence" style="-fx-border-color: #f68809;" />
-            <CheckBox fx:id="A" layoutX="115.0" layoutY="122.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="A" />
-            <CheckBox fx:id="A1" layoutX="161.0" layoutY="122.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="A1" />
-            <CheckBox fx:id="B" layoutX="206.0" layoutY="122.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="B" />
-            <CheckBox fx:id="B1" layoutX="254.0" layoutY="122.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="B1" />
-            <CheckBox fx:id="C" layoutX="161.0" layoutY="163.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="C" />
-            <CheckBox fx:id="C1" layoutX="206.0" layoutY="162.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="38.0" style="-fx-mark-color: #f68809;" text="C1" />
-            <CheckBox fx:id="D" layoutX="162.0" layoutY="202.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="D" />
-            <CheckBox fx:id="D1" layoutX="255.0" layoutY="202.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="D1" />
-            <CheckBox fx:id="BE" layoutX="115.0" layoutY="163.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="BE" />
-            <CheckBox fx:id="CE" layoutX="114.0" layoutY="202.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="CE" />
-            <CheckBox fx:id="C1E" layoutX="255.0" layoutY="163.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="C1E" />
-            <CheckBox fx:id="DE" layoutX="205.0" layoutY="202.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="DE" />
-            <CheckBox fx:id="D1E" layoutX="113.0" layoutY="244.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="D1E" />
-            <CheckBox fx:id="T" layoutX="162.0" layoutY="244.0" mnemonicParsing="false" style="-fx-mark-color: #f68809;" text="T" />
-            <Circle fx:id="Page1" fill="WHITE" layoutX="192.0" layoutY="25.0" onMouseClicked="#onClickCirclePage1" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Page2" fill="DODGERBLUE" layoutX="215.0" layoutY="25.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </AnchorPane>
-      <Button fx:id="SignUpButton" layoutX="92.0" layoutY="453.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: #f68809;" text="Sign Up" textFill="#fcfcfc" />
-      <Hyperlink fx:id="SignIn1" layoutX="269.0" layoutY="495.0" onAction="#onClickLinkSignIn" text="Sign In" textFill="#f68809" />
-      <Text layoutX="124.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" />
-      <Label fx:id="CautionLabel" layoutX="150.0" layoutY="535.0" prefHeight="18.0" prefWidth="159.0" textFill="RED" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f68809" height="600.0" layoutX="450.0" stroke="TRANSPARENT" strokeType="INSIDE" width="450.0" />
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="486.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent a Car with GLU-Your Journey, Your Way!" wrappingWidth="352.612060546875">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1de21d" height="600.0" layoutX="450.0" stroke="TRANSPARENT" strokeType="INSIDE" width="450.0" />
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="474.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekibratur Library: Your Gateway to Infinite Knowledge, Anytime, Anywhere!" wrappingWidth="402.2120361328125">
          <font>
             <Font name="Humanst521 BT Bold Italic" size="38.0" />
          </font>
       </Text>
-      <ImageView fx:id="Car" fitHeight="315.0" fitWidth="545.0" layoutX="341.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Car" fitHeight="244.0" fitWidth="443.0" layoutX="460.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/bookposter.png" />
+         </image></ImageView>
+      <ImageView fitHeight="110.0" fitWidth="97.0" layoutX="83.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="180.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekibratur">
+         <font>
+            <Font name="Verdana Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="182.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

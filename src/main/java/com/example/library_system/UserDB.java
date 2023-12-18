@@ -23,10 +23,6 @@ public class UserDB {
                 " \"name\", surname, email, phone, address, password, birthday)" +
                 " VALUES (?, ?, ?, ?, ?, ?, ?);";
 
-        String insertPassportSQL = "INSERT INTO passport (user_id, passportnumber) VALUES (DEFAULT, ?);";
-
-        String insertLicenseSQL = "INSERT INTO license(user_id, number, category) VALUES (DEFAULT, ?, ?);";
-
         int userId = -1;
 
         try (PreparedStatement userStmt = conn.prepareStatement(insertUserSQL, Statement.RETURN_GENERATED_KEYS)) {
@@ -52,37 +48,6 @@ public class UserDB {
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        }
-
-        if (userId != -1) {
-            try (PreparedStatement passportStmt = conn.prepareStatement(insertPassportSQL)) {
-                passportStmt.setString(1, user.getUser_passportNumber());
-
-                int affectedRows = passportStmt.executeUpdate();
-
-                if (affectedRows > 0) {
-                    System.out.println("Passport data inserted successfully!");
-                } else {
-                    System.out.println("Failed to insert passport data");
-                }
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-
-            try (PreparedStatement licenseStmt = conn.prepareStatement(insertLicenseSQL)) {
-                licenseStmt.setString(1, user.getUser_licenseNumber());
-                licenseStmt.setString(2, user.getUser_licenseCategoria());
-
-                int affectedRows = licenseStmt.executeUpdate();
-
-                if (affectedRows > 0) {
-                    System.out.println("License data inserted successfully!");
-                } else {
-                    System.out.println("Failed to insert license data");
-                }
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
         }
 
         return userId;

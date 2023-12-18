@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_system.AdminPageController">
+    <children>
+        <TableView fx:id="booksTable" layoutX="-1.0" layoutY="86.0" onKeyPressed="#onBookSelected" onMouseClicked="#onBookSelected" prefHeight="514.0" prefWidth="352.0">
+            <columns>
+                <TableColumn fx:id="authorColumn" prefWidth="127.99999696016312" text="Author" />
+                <TableColumn fx:id="titleColumn" prefWidth="127.99998474121094" text="Book" />
+                <TableColumn fx:id="yearColumn" prefWidth="95.20001220703125" text="Year" />
+            </columns>
+        </TableView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1de21d" height="74.0" stroke="TRANSPARENT" strokeType="INSIDE" width="900.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="236.0" layoutX="382.0" layoutY="86.0" stroke="#1de01d" strokeType="INSIDE" strokeWidth="3.0" width="243.0" />
+        <ImageView fitHeight="358.0" fitWidth="358.0" layoutX="325.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/book.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="BookName" alignment="BASELINE_CENTER" layoutX="449.0" layoutY="168.0" prefHeight="48.0" prefWidth="98.0" style="-fx-font-weight: bold;" text="Name" textFill="WHITE" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="BookAuthor" alignment="BASELINE_CENTER" layoutX="444.0" layoutY="249.0" prefHeight="26.0" prefWidth="107.0" text="Author" textFill="WHITE">
+            <font>
+                <Font size="11.5" />
+            </font>
+        </Label>
+        <Text layoutX="643.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+        <Text layoutX="645.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" />
+        <Text layoutX="644.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESPN" />
+        <Text layoutX="645.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" />
+        <Text layoutX="385.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" wrappingWidth="84.251953125">
+            <font>
+                <Font size="12.5" />
+            </font>
+        </Text>
+        <Button fx:id="SaveButton" layoutX="754.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefHeight="0.0" prefWidth="126.0" style="-fx-background-color: #1de21d;" text="Save" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Button>
+      <TextField fx:id="Name" layoutX="706.0" layoutY="98.0" prefHeight="26.0" prefWidth="179.0" />
+      <TextField fx:id="Author" layoutX="706.0" layoutY="156.0" prefHeight="26.0" prefWidth="179.0" />
+      <TextField fx:id="Espn" layoutX="706.0" layoutY="220.0" prefHeight="26.0" prefWidth="179.0" />
+      <TextField fx:id="Description" layoutX="496.0" layoutY="349.0" prefHeight="87.0" prefWidth="385.0" />
+      <Button fx:id="DeleteButton" layoutX="612.0" layoutY="518.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="0.0" prefWidth="126.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text layoutX="385.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price(per Month):" wrappingWidth="107.20000000000005">
+         <font>
+            <Font size="12.5" />
+         </font>
+      </Text>
+      <TextField fx:id="Price" layoutX="498.0" layoutY="453.0" prefHeight="26.0" prefWidth="386.0" />
+      <Label fx:id="UserName" alignment="TOP_RIGHT" layoutX="634.0" layoutY="30.0" prefHeight="18.0" prefWidth="186.0" text="Label">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogoutButton" layoutX="831.0" layoutY="26.0" mnemonicParsing="false" onAction="#onClickLogoutButton" prefHeight="6.0" prefWidth="57.0" style="-fx-background-color: red;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="74.0" fitWidth="77.0" layoutX="34.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/logo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="SearchField" layoutX="296.0" layoutY="26.0" prefHeight="27.0" prefWidth="222.0" promptText="Write book name or Author" style="-fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5;" />
+      <Button fx:id="SearchButton" layoutX="525.0" layoutY="26.0" maxHeight="26.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="20.0" prefWidth="54.0" style="-fx-background-color: black;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.8" />
+         </font>
+      </Button>
+      <Text layoutX="109.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekibratur">
+         <font>
+            <Font name="Verdana Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="111.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="Year" layoutX="706.0" layoutY="288.0" prefHeight="26.0" prefWidth="179.0" />
+      <Label fx:id="Message" layoutX="386.0" layoutY="523.0" prefHeight="18.0" prefWidth="186.0" textFill="#008616" />
+    </children>
+</AnchorPane>

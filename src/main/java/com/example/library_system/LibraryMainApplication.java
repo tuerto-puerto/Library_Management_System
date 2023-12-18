@@ -48,6 +48,6 @@ public class LibraryMainApplication extends Application {
 
     public static void setErrorMessage(String errorMessage1) {
         errorMessage = errorMessage1;
-    }
+    }a
 }
 
