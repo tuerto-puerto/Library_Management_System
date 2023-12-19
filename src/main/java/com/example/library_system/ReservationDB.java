@@ -6,8 +6,8 @@ import java.time.LocalDate;
 public class ReservationDB {
     private static Connection conn;
     private static final String dbURL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String username = "azar";
-    private static final String password = "azar";
+    private static final String username = "postgres";
+    private static final String password = "1337";
 
     // Constructor to initialize the connection
     public ReservationDB() {
