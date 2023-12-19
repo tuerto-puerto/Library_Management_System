@@ -4,6 +4,12 @@
 This project implements a simple library system in Java using JavaFX for the user interface.
 
 Team members: Bekzhan Azamatov, Ibrohim Pazylov, Turatbek Torobekov.
+
+Ibrohim Pazylov: Responsible for frontend development, UI/UX design, and managing user authentication.
+
+Bekzhan Azamatov: Handles backend development, integrates databases, and manages error handling.
+
+Turatbek Torobekov: Manages quality assurance, testing procedures, and documentation efforts
 ## Classes
 
 1. **UserInfo.java**: Implements a singleton pattern to store user information such as name and ID.
@@ -30,3 +36,26 @@ Team members: Bekzhan Azamatov, Ibrohim Pazylov, Turatbek Torobekov.
 
 
 ![image](https://github.com/tuerto-puerto/Library_Management_System/assets/120041495/4975af4c-f847-42de-856b-ccd8d8259bc3)
+
+
+Commit History:
+Latest Commit: Finishing Project
+Committed: 13 hours ago
+Author: tuerto-puerto
+Description: Verified the final changes in the project and updated the README.md file.
+Update gitignore
+Committed: 2 days ago
+Author: Bekzhan Azamatov
+Description: Ignored unnecessary files by updating the .gitignore file.
+Add Authentication Pages
+Committed: 2 days ago
+Author: Ibrohim Pazylov
+Description: Added authentication pages to the project.
+Initial Commit
+Committed: 2 days ago
+Author: tuerto-puerto
+Description: Initial commit to the repository.
+Commit History Summary:
+Total Commits: 4
+Latest Commit: Finishing the project with verification.
+Date of First Commit: 2 days ago
