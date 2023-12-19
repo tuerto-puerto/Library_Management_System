@@ -8,8 +8,8 @@ import java.util.List;
 public class BookDB {
 
     private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String JDBC_USER = "azar";
-    private static final String JDBC_PASSWORD = "azar";
+    private static final String JDBC_USER = "postgres";
+    private static final String JDBC_PASSWORD = "1337";
 
     public BookDB() {
         try {
