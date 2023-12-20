@@ -1,5 +1,6 @@
 # Library_Management_System
 # Library System Project
+[presentations](https://gamma.app/docs/Library-Management-System-in-Java-qb3o45vq5vwmflf)
 
 This project implements a simple library system in Java using JavaFX for the user interface.
 
@@ -36,6 +37,15 @@ Turatbek Torobekov: Manages quality assurance, testing procedures, and documenta
 
 
 ![image](https://github.com/tuerto-puerto/Library_Management_System/assets/120041495/4975af4c-f847-42de-856b-ccd8d8259bc3)
+
+
+
+**Further improvements to the project Library Management System**:
+**before**:
+![image](https://github.com/tuerto-puerto/Library_Management_System/assets/120041495/cddcf9d6-e7ae-4fb4-9c79-7eb52668fb9e)
+**after**
+![image](https://github.com/tuerto-puerto/Library_Management_System/assets/120041495/8028d486-8993-4725-9970-415f903fff16)
+
 
 
 Commit History:
