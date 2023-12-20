@@ -1,6 +1,6 @@
 # Library_Management_System
 # Library System Project
-[presentations](https://gamma.app/docs/Library-Management-System-in-Java-qb3o45vq5vwmflf)
+[presentation](https://gamma.app/docs/Library-Management-System-in-Java-qb3o45vq5vwmflf)
 
 This project implements a simple library system in Java using JavaFX for the user interface.
 
